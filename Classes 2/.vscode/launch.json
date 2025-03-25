@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Debug (g++)",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/main",  // Path to the compiled executable (on Windows, use main.exe)
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": true,
+        "MIMode": "gdb",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ],
+        "miDebuggerPath": "/usr/bin/gdb",  // Adjust path to gdb if necessary
+        "preLaunchTask": "build",  // This links to the task defined in tasks.json
+        "miDebuggerArgs": "",
+        "logging": { "moduleLoad": false },
+        "windows": {
+          "program": "${workspaceFolder}/main.exe"  // Use main.exe on Windows
+        }
+      }
+    ]
+  }
+  
